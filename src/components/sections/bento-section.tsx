@@ -3,7 +3,7 @@
 import { SectionHeader } from "@/components/section-header";
 import { siteConfig } from "@/lib/config";
 
-export function BentoSection() {
+const BentoSection = () => {
   const { title, description, items } = siteConfig.bentoSection;
 
   return (
@@ -46,3 +46,5 @@ export function BentoSection() {
     </section>
   );
 }
+
+export default BentoSection;

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 
-export function CTASection() {
+const CTASection = () => {
   const { ctaSection } = siteConfig;
 
   return (
@@ -17,7 +17,7 @@ export function CTASection() {
             alt="Agent CTA Background"
             className="absolute inset-0 w-full h-full object-cover object-right md:object-center"
             fill
-            priority
+            loading="lazy"
           />
           <div className="absolute inset-0 -top-32 md:-top-40 flex flex-col items-center justify-center">
             <h1 className="text-white text-4xl md:text-7xl font-medium tracking-tighter max-w-xs md:max-w-xl text-center">
@@ -38,3 +38,5 @@ export function CTASection() {
     </section>
   );
 }
+
+export default CTASection;

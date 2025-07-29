@@ -7,7 +7,7 @@ import {
 import { SectionHeader } from "@/components/section-header";
 import { siteConfig } from "@/lib/config";
 
-export function FAQSection() {
+const FAQSection = () => {
   const { faqSection } = siteConfig;
 
   return (
@@ -51,3 +51,5 @@ export function FAQSection() {
     </section>
   );
 }
+
+export default FAQSection;

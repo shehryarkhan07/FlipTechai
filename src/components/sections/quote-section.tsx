@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { siteConfig } from "@/lib/config";
 
-export function QuoteSection() {
+const QuoteSection = () => {
   const { quoteSection } = siteConfig;
 
   return (
@@ -33,3 +33,5 @@ export function QuoteSection() {
     </section>
   );
 }
+
+export default QuoteSection;

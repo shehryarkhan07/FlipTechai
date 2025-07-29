@@ -3,7 +3,7 @@
 import { SectionHeader } from "@/components/section-header";
 import { siteConfig } from "@/lib/config";
 
-export function GrowthSection() {
+const GrowthSection = () =>{
   const { title, description, items } = siteConfig.growthSection;
 
   return (
@@ -45,3 +45,5 @@ export function GrowthSection() {
     </section>
   );
 }
+
+export default GrowthSection;

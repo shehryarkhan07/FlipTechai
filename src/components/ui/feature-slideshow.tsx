@@ -8,7 +8,7 @@ import React, {
   useState,
 } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
-import { motion, useInView } from "motion/react";
+// import { motion, useInView } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -94,33 +94,33 @@ type FeatureProps = {
 
 export const Feature = ({
   collapseDelay = 5000,
-  ltr = false,
+  // ltr = false,
   linePosition = "left",
   lineColor = "bg-neutral-500 dark:bg-white",
   featureItems,
 }: FeatureProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(-1);
-  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-  const [previousIndex, setPreviousIndex] = useState<number>(-1);
+  // const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+  // const [previousIndex, setPreviousIndex] = useState<number>(-1);
 
   const carouselRef = useRef<HTMLUListElement>(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    amount: 0.5,
-  });
+  // const isInView = useInView(ref, {
+  //   once: true,
+  //   amount: 0.5,
+  // });
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (isInView) {
-        setCurrentIndex(0);
-      } else {
-        setCurrentIndex(-1);
-      }
-    }, 100);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     if (isInView) {
+  //       setCurrentIndex(0);
+  //     } else {
+  //       setCurrentIndex(-1);
+  //     }
+  //   }, 100);
 
-    return () => clearTimeout(timer);
-  }, [isInView]);
+  //   return () => clearTimeout(timer);
+  // }, [isInView]);
 
   const scrollToIndex = (index: number) => {
     if (carouselRef.current) {
@@ -184,173 +184,162 @@ export const Feature = ({
   }, [featureItems.length]);
 
   // Handle image transition
-  useEffect(() => {
-    if (currentIndex !== previousIndex) {
-      setImageLoaded(false);
-      setPreviousIndex(currentIndex);
-    }
-  }, [currentIndex, previousIndex]);
+  // useEffect(() => {
+  //   if (currentIndex !== previousIndex) {
+  //     setImageLoaded(false);
+  //     setPreviousIndex(currentIndex);
+  //   }
+  // }, [currentIndex, previousIndex]);
 
   // Replace the existing image rendering section with this optimized version
-  const renderMedia = () => {
-    const currentItem = featureItems[currentIndex];
+  // const renderMedia = () => {
+  //   const currentItem = featureItems[currentIndex];
 
-    if (!currentItem) {
-      return (
-        <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1 animate-pulse" />
-      );
-    }
+  //   if (!currentItem) {
+  //     return (
+  //       <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1 animate-pulse" />
+  //     );
+  //   }
 
-    if (currentItem.image) {
-      return (
-        <div className="relative h-full w-full overflow-hidden">
-          {/* Placeholder/Fallback */}
-          <div
-            className={cn(
-              "absolute inset-0 bg-gray-200 rounded-xl border border-neutral-300/50",
-              "transition-all duration-150",
-              imageLoaded ? "opacity-0" : "opacity-100"
-            )}
-          />
+  //   if (currentItem.image) {
+  //     return (
+  //       <div className="relative h-full w-full overflow-hidden">
+  //         {/* Placeholder/Fallback */}
+  //         <div
+  //           className={cn(
+  //             "absolute inset-0 bg-gray-200 rounded-xl border border-neutral-300/50",
+  //             "transition-all duration-150",
+  //             imageLoaded ? "opacity-0" : "opacity-100"
+  //           )}
+  //         />
 
-          {/* Main Image */}
-          <motion.img
-            key={currentIndex}
-            src={currentItem.image}
-            alt={currentItem.title}
-            className={cn(
-              "aspect-auto h-full w-full rounded-xl border border-neutral-300/50 object-cover p-1",
-              "transition-all duration-300",
-              imageLoaded ? "opacity-100 blur-0" : "opacity-0 blur-xl"
-            )}
-            initial={{
-              opacity: 0,
-              filter: "blur(5px)",
-            }}
-            animate={{
-              opacity: imageLoaded ? 1 : 0,
-              filter: imageLoaded ? "blur(0px)" : "blur(5px)",
-            }}
-            transition={{
-              duration: 0.3,
-              ease: [0.4, 0, 0.2, 1],
-            }}
-            onLoad={() => setImageLoaded(true)}
-            loading="eager"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
-      );
-    }
+  //         {/* Main Image */}
+  //         <motion.img
+  //           key={currentIndex}
+  //           src={currentItem.image}
+  //           alt={currentItem.title}
+  //           className={cn(
+  //             "aspect-auto h-full w-full rounded-xl border border-neutral-300/50 object-cover p-1",
+  //             "transition-all duration-300",
+  //             imageLoaded ? "opacity-100 blur-0" : "opacity-0 blur-xl"
+  //           )}
+  //           initial={{
+  //             opacity: 0,
+  //             filter: "blur(5px)",
+  //           }}
+  //           animate={{
+  //             opacity: imageLoaded ? 1 : 0,
+  //             filter: imageLoaded ? "blur(0px)" : "blur(5px)",
+  //           }}
+  //           transition={{
+  //             duration: 0.3,
+  //             ease: [0.4, 0, 0.2, 1],
+  //           }}
+  //           onLoad={() => setImageLoaded(true)}
+  //           loading="eager"
+  //           sizes="(max-width: 768px) 100vw, 50vw"
+  //         />
+  //       </div>
+  //     );
+  //   }
 
-    if (currentItem.video) {
-      return (
-        <video
-          preload="auto"
-          src={currentItem.video}
-          className="aspect-auto h-full w-full rounded-lg object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline // Better mobile support
-        />
-      );
-    }
+  //   // if (currentItem.video) {
+  //   //   return (
+  //   //     <video
+  //   //       preload="auto"
+  //   //       src={currentItem.video}
+  //   //       className="aspect-auto h-full w-full rounded-lg object-cover"
+  //   //       autoPlay
+  //   //       loop
+  //   //       muted
+  //   //       playsInline // Better mobile support
+  //   //     />
+  //   //   );
+  //   // }
 
-    return (
-      <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1" />
-    );
-  };
+  //   return (
+  //     <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1" />
+  //   );
+  // };
 
   return (
     <div ref={ref} className="w-full">
       <div className="flex w-full flex-col items-center justify-center max-w-7xl mx-auto">
         <div className="grid h-full grid-cols-5 gap-x-10 px-10 md:px-20 items-center w-full">
+          <div className={`col-span-5 w-full h-full flex justify-center items-center`}>
+  <Accordion.Root
+    className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-5xl mx-auto"
+    type="single"
+    defaultValue={`item-${currentIndex}`}
+    value={`item-${currentIndex}`}
+    onValueChange={(value) =>
+      setCurrentIndex(Number(value.split("-")[1]))
+    }
+  >
+    {featureItems.map((item, index) => (
+      <AccordionItem
+        key={item.id}
+        className={cn(
+          "relative data-[state=open]:bg-white dark:data-[state=open]:bg-[#27272A] rounded-lg data-[state=closed]:rounded-none data-[state=closed]:border-0",
+          "dark:data-[state=open]:shadow-[0px_0px_0px_1px_rgba(249,250,251,0.06),0px_0px_0px_1px_var(--color-zinc-800,#27272A),0px_1px_2px_-0.5px_rgba(0,0,0,0.24),0px_2px_4px_-1px_rgba(0,0,0,0.24)]",
+          "data-[state=open]:shadow-[0px_0px_1px_0px_rgba(0,0,0,0.16),0px_1px_2px_-0.5px_rgba(0,0,0,0.16)]"
+        )}
+        value={`item-${index}`}
+      >
+        <div
+          className={cn(
+            "absolute overflow-hidden rounded-lg transition-opacity",
+            "data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
+            "bg-neutral-300/50 dark:bg-neutral-300/30",
+            {
+              "bottom-0 top-0 h-full w-0.5 left-0": linePosition === "left",
+              "bottom-0 top-0 h-full w-0.5 right-0": linePosition === "right",
+              "left-0 right-0 top-0 h-0.5 w-full": linePosition === "top",
+              "left-0 right-0 bottom-0 h-0.5 w-full": linePosition === "bottom",
+            }
+          )}
+          data-state={currentIndex === index ? "open" : "closed"}
+        >
           <div
-            className={`col-span-2 w-full h-full hidden lg:flex md:items-center ${
-              ltr ? "md:order-2 md:justify-end" : "justify-start"
-            }`}
-          >
-            <Accordion.Root
-              className="w-full h-full flex flex-col gap-8"
-              type="single"
-              defaultValue={`item-${currentIndex}`}
-              value={`item-${currentIndex}`}
-              onValueChange={(value) =>
-                setCurrentIndex(Number(value.split("-")[1]))
-              }
-            >
-              {featureItems.map((item, index) => (
-                <AccordionItem
-                  key={item.id}
-                  className={cn(
-                    "relative data-[state=open]:bg-white dark:data-[state=open]:bg-[#27272A] rounded-lg data-[state=closed]:rounded-none data-[state=closed]:border-0",
-                    "dark:data-[state=open]:shadow-[0px_0px_0px_1px_rgba(249,250,251,0.06),0px_0px_0px_1px_var(--color-zinc-800,#27272A),0px_1px_2px_-0.5px_rgba(0,0,0,0.24),0px_2px_4px_-1px_rgba(0,0,0,0.24)]",
-                    "data-[state=open]:shadow-[0px_0px_1px_0px_rgba(0,0,0,0.16),0px_1px_2px_-0.5px_rgba(0,0,0,0.16)]"
-                  )}
-                  value={`item-${index}`}
-                >
-                  <div
-                    className={cn(
-                      "absolute overflow-hidden rounded-lg transition-opacity",
-                      "data-[state=closed]:opacity-0 data-[state=open]:opacity-100",
-                      "bg-neutral-300/50 dark:bg-neutral-300/30",
-                      {
-                        "bottom-0 top-0 h-full w-0.5 left-0":
-                          linePosition === "left",
-                        "bottom-0 top-0 h-full w-0.5 right-0":
-                          linePosition === "right",
-                        "left-0 right-0 top-0 h-0.5 w-full":
-                          linePosition === "top",
-                        "left-0 right-0 bottom-0 h-0.5 w-full":
-                          linePosition === "bottom",
-                      }
-                    )}
-                    data-state={currentIndex === index ? "open" : "closed"}
-                  >
-                    <div
-                      className={cn(
-                        "absolute transition-all ease-linear",
-                        lineColor,
-                        {
-                          "left-0 top-0 w-full": ["left", "right"].includes(
-                            linePosition
-                          ),
-                          "left-0 top-0 h-full": ["top", "bottom"].includes(
-                            linePosition
-                          ),
-                        },
-                        currentIndex === index
-                          ? ["left", "right"].includes(linePosition)
-                            ? "h-full"
-                            : "w-full"
-                          : ["left", "right"].includes(linePosition)
-                          ? "h-0"
-                          : "w-0"
-                      )}
-                      style={{
-                        transitionDuration:
-                          currentIndex === index ? `${collapseDelay}ms` : "0s",
-                      }}
-                    />
-                  </div>
-                  <AccordionTrigger className="font-semibold text-lg tracking-tight text-left">
-                    {item.title}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-sm font-medium">
-                    {item.content}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion.Root>
-          </div>
-          <div
+            className={cn(
+              "absolute transition-all ease-linear",
+              lineColor,
+              {
+                "left-0 top-0 w-full": ["left", "right"].includes(linePosition),
+                "left-0 top-0 h-full": ["top", "bottom"].includes(linePosition),
+              },
+              currentIndex === index
+                ? ["left", "right"].includes(linePosition)
+                  ? "h-full"
+                  : "w-full"
+                : ["left", "right"].includes(linePosition)
+                ? "h-0"
+                : "w-0"
+            )}
+            style={{
+              transitionDuration:
+                currentIndex === index ? `${collapseDelay}ms` : "0s",
+            }}
+          />
+        </div>
+        <AccordionTrigger className="font-semibold text-lg tracking-tight text-left">
+          {item.title}
+        </AccordionTrigger>
+        <AccordionContent className="text-sm font-medium">
+          {item.content}
+        </AccordionContent>
+      </AccordionItem>
+    ))}
+  </Accordion.Root>
+</div>
+
+          {/* <div
             className={`col-span-5 h-[350px] min-h-[200px] w-auto lg:col-span-3 ${
               ltr && "md:order-1"
             }`}
           >
             {renderMedia()}
-          </div>
+          </div> */}
 
           <ul
             ref={carouselRef}

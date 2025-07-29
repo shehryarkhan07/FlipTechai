@@ -1,9 +1,9 @@
-import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
+// import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 
 export function HeroVideoSection() {
   return (
     <div className="relative px-6 mt-10">
-      <div className="relative size-full shadow-xl rounded-2xl overflow-hidden">
+      {/* <div className="relative size-full shadow-xl rounded-2xl overflow-hidden">
         <HeroVideoDialog
           className="block dark:hidden"
           animationStyle="from-center"
@@ -18,7 +18,7 @@ export function HeroVideoSection() {
           // thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
           thumbnailAlt="Hero Video"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
