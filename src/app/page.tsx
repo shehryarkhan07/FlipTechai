@@ -3,7 +3,6 @@ const EmpowerCards = dynamic(() => import("@/components/sections/empowercard"));
 const BentoSection = dynamic(() => import("@/components/sections/bento-section"));
 const GrowthSection = dynamic(() => import("@/components/sections/growth-section"));
 const QuoteSection = dynamic(() => import("@/components/sections/quote-section"));
-const HeroSection = dynamic(() => import("@/components/sections/hero-section"));
 const CompanyShowcase = dynamic(() => import("@/components/sections/company-showcase"));
 const PricingSection = dynamic(() => import("@/components/sections/pricing-section"));
 const TestimonialSection = dynamic(() => import("@/components/sections/testimonial-section"));
@@ -11,6 +10,7 @@ const FAQSection = dynamic(() => import("@/components/sections/faq-section"));
 const CTASection = dynamic(() => import("@/components/sections/cta-section"));
 const FooterSection = dynamic(() => import("@/components/sections/footer-section"));
 
+import HeroSection from "@/components/sections/hero-section";
 import dynamic from "next/dynamic";
 
 export default function Home() {

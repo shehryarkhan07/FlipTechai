@@ -9,7 +9,7 @@ const GrowthSection = () =>{
   return (
     <section
       id="growth"
-      className="flex flex-col items-center justify-center w-full relative px-5 md:px-10"
+      className="flex flex-col items-center justify-center w-full relative px-2 md:px-10"
     >
       <div className="border-x mx-5 md:mx-10 relative">
         {/* Decorative borders */}
@@ -18,10 +18,10 @@ const GrowthSection = () =>{
 
         {/* Section Header */}
         <SectionHeader>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
+          <h2 className="text-xl md:text-4xl font-medium tracking-tighter text-center text-balance">
             {title}
           </h2>
-          <p className="text-muted-foreground text-center text-balance font-medium">
+          <p className="text-sm md:text-base text-center text-balance font-medium">
             {description}
           </p>
         </SectionHeader>
