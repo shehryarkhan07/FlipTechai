@@ -9,6 +9,7 @@ const TestimonialSection = dynamic(() => import("@/components/sections/testimoni
 const FAQSection = dynamic(() => import("@/components/sections/faq-section"));
 const CTASection = dynamic(() => import("@/components/sections/cta-section"));
 const FooterSection = dynamic(() => import("@/components/sections/footer-section"));
+const FlipTechProcess = dynamic(() => import("@/components/sections/fliptechprocess"));
 
 import HeroSection from "@/components/sections/hero-section";
 import dynamic from "next/dynamic";
@@ -23,6 +24,7 @@ export default function Home() {
       <EmpowerCards/>
       <FeatureSection />
       <GrowthSection />
+      <FlipTechProcess/>
       <PricingSection />
       <TestimonialSection />
       <FAQSection />

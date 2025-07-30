@@ -73,7 +73,7 @@ export const siteConfig = {
     // badge: "Introducing custom automations",
     title: "The Future of Work",
     description:
-      "Deploy specialized AI teams across marketing, operations, product, research, and support. Each team works seamlessly together, handling complex tasks so your human teams can focus on strategic initiatives.",
+      "Orchestrated intelligence. Unified teams. Infinite scale.",
     cta: {
       primary: {
         text: "Try for Free",
