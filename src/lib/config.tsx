@@ -666,15 +666,15 @@ export const siteConfig = {
       },
     ],
   },
-  quoteSection: {
-    quote:
-      "SkyAgent has transformed our daily operations. Tasks that once consumed hours now complete in moments, freeing our team to focus on creativity and strategic growth.",
-    author: {
-      name: "Alex Johnson",
-      role: "CTO, Innovatech",
-      image: "https://randomuser.me/api/portraits/men/91.jpg",
-    },
-  },
+  // quoteSection: {
+  //   quote:
+  //     "SkyAgent has transformed our daily operations. Tasks that once consumed hours now complete in moments, freeing our team to focus on creativity and strategic growth.",
+  //   author: {
+  //     name: "Alex Johnson",
+  //     role: "CTO, Innovatech",
+  //     image: "https://randomuser.me/api/portraits/men/91.jpg",
+  //   },
+  // },
   pricing: {
     title: "Pricing That Scales With You",
     description:

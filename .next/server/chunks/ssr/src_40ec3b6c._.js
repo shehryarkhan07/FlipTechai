@@ -1409,7 +1409,7 @@ function FlipTechProcess() {
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/fliptechprocess.tsx",
                 lineNumber: 21,
-                columnNumber: 6
+                columnNumber: 9
             }, this),
             day: "Days 1–2",
             title: "Discovery & Strategy",
@@ -1425,7 +1425,7 @@ function FlipTechProcess() {
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/fliptechprocess.tsx",
                 lineNumber: 35,
-                columnNumber: 6
+                columnNumber: 9
             }, this),
             day: "Days 3–5",
             title: "Solution Design",
@@ -1441,7 +1441,7 @@ function FlipTechProcess() {
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/fliptechprocess.tsx",
                 lineNumber: 49,
-                columnNumber: 6
+                columnNumber: 9
             }, this),
             day: "Days 6–10",
             title: "Rapid Development",
@@ -1457,7 +1457,7 @@ function FlipTechProcess() {
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/fliptechprocess.tsx",
                 lineNumber: 63,
-                columnNumber: 6
+                columnNumber: 9
             }, this),
             day: "Days 11–13",
             title: "Testing & Refinement",
@@ -1473,7 +1473,7 @@ function FlipTechProcess() {
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/fliptechprocess.tsx",
                 lineNumber: 77,
-                columnNumber: 6
+                columnNumber: 9
             }, this),
             day: "Day 14",
             title: "Launch",
@@ -1483,7 +1483,7 @@ function FlipTechProcess() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         let start = 0;
         const total = 100;
-        const duration = 2000; // in ms
+        const duration = 2000;
         const interval = 20;
         const increment = interval / duration * total;
         const animate = ()=>{
@@ -1499,14 +1499,14 @@ function FlipTechProcess() {
         animate();
     }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "w-full px-8 py-16 text-center bg-white dark:bg-black transition-colors duration-300",
+        className: "w-full px-4 md:px-8 py-16 text-center bg-white dark:bg-[#18181B] transition-colors duration-300",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-4xl font-bold text-black dark:text-white",
+                className: "text-3xl md:text-4xl font-bold text-black dark:text-white",
                 children: [
                     "THE ",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-emerald-400 ",
+                        className: "text-blue-500",
                         children: "FLIP-TECH"
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/fliptechprocess.tsx",
@@ -1521,7 +1521,7 @@ function FlipTechProcess() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "mt-2 text-gray-600 dark:text-gray-300",
+                className: "mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300 px-2",
                 children: "Our proven 14-day journey from concept to working AI solution."
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/fliptechprocess.tsx",
@@ -1532,7 +1532,7 @@ function FlipTechProcess() {
                 className: "relative mt-12",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden md:block absolute left-0 top-1/2 w-full h-1 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden",
+                        className: "hidden md:block absolute left-0 top-[86px] w-full h-1 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                             initial: {
                                 width: 0
@@ -1561,10 +1561,10 @@ function FlipTechProcess() {
                             const threshold = (index + 1) / steps.length * 100;
                             const isActive = progress >= threshold;
                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col items-center",
+                                className: "flex flex-col items-center text-center",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `text-2xl rounded-full p-2 md:p-3 shadow-md transition-all duration-300 ${isActive ? "bg-blue-500 text-white" : "bg-gray-300 dark:bg-gray-700 text-black dark:text-white"}`,
+                                        className: `text-xl rounded-full p-2 md:p-3 shadow-md transition-all duration-300 ${isActive ? "bg-blue-500 text-white" : "bg-gray-300 dark:bg-gray-700 text-black dark:text-white"}`,
                                         children: step.icon
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/fliptechprocess.tsx",
@@ -1572,7 +1572,7 @@ function FlipTechProcess() {
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-sm text-emerald-400 font-semibold mt-2",
+                                        className: "text-xs md:text-sm text-emerald-400 font-semibold mt-2",
                                         children: step.day
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/fliptechprocess.tsx",
@@ -1580,7 +1580,7 @@ function FlipTechProcess() {
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "mt-5 font-bold text-lg text-black dark:text-white",
+                                        className: "mt-3 text-base md:text-lg font-bold text-black dark:text-white",
                                         children: step.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/fliptechprocess.tsx",
@@ -1588,7 +1588,7 @@ function FlipTechProcess() {
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: " max-w-[200px] text-sm text-gray-600 dark:text-gray-400",
+                                        className: "mt-1 max-w-[220px] text-xs md:text-sm text-gray-600 dark:text-gray-400",
                                         children: step.desc
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/fliptechprocess.tsx",
