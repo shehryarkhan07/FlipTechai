@@ -74,16 +74,16 @@ export const siteConfig = {
     title: "The Future of Work",
     description:
       "Orchestrated intelligence. Unified teams. Infinite scale.",
-    cta: {
-      primary: {
-        text: "Try for Free",
-        href: "#",
-      },
-      secondary: {
-        text: "Log in",
-        href: "#",
-      },
-    },
+    // cta: {
+    //   primary: {
+    //     text: "Try for Free",
+    //     href: "#",
+    //   },
+    //   secondary: {
+    //     text: "Log in",
+    //     href: "#",
+    //   },
+    // },
   },
   companyShowcase: {
     companyLogos: [
