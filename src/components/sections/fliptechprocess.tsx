@@ -1,6 +1,6 @@
 'use client'
-import { useEffect, useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion,  } from "framer-motion";
 import Image from "next/image";
 
 interface Step {
@@ -11,8 +11,8 @@ interface Step {
 }
 
 export default function FlipTechProcess() {
-  const controls = useAnimation();
-  const lineRef = useRef<HTMLDivElement | null>(null);
+  // const controls = useAnimation();
+  // const lineRef = useRef<HTMLDivElement | null>(null);
   const [progress, setProgress] = useState(0);
 
   const steps: Step[] = [

@@ -3,7 +3,7 @@
 import { Icons } from "@/components/icons";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { siteConfig } from "@/lib/config";
+// import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 
 const FooterSection = () => {

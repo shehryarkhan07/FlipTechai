@@ -1,7 +1,10 @@
 import { cn } from "@/lib/utils";
 import { marked } from "marked";
 import { memo, useId, useMemo } from "react";
-import ReactMarkdown, { Components } from "react-markdown";
+import ReactMarkdown, {
+  Components,
+  ReactMarkdownProps,
+} from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CodeBlock, CodeBlockCode } from "./code-block";
 
@@ -14,7 +17,7 @@ export type MarkdownProps = {
 
 function parseMarkdownIntoBlocks(markdown: string): string[] {
   const tokens = marked.lexer(markdown);
-  return tokens.map((token: any) => token.raw);
+  return tokens.map((token) => token.raw ?? ""); // avoid undefined
 }
 
 function extractLanguage(className?: string): string {
@@ -24,10 +27,15 @@ function extractLanguage(className?: string): string {
 }
 
 const INITIAL_COMPONENTS: Partial<Components> = {
-  code: function CodeComponent({ className, children, ...props }: any) {
+  code: function CodeComponent({
+    className,
+    children,
+    node,
+    ...props
+  }: ReactMarkdownProps) {
     const isInline =
-      !props.node?.position?.start.line ||
-      props.node?.position?.start.line === props.node?.position?.end.line;
+      !node?.position?.start.line ||
+      node?.position?.start.line === node?.position?.end.line;
 
     if (isInline) {
       return (
@@ -47,11 +55,13 @@ const INITIAL_COMPONENTS: Partial<Components> = {
 
     return (
       <CodeBlock className={className}>
-        <CodeBlockCode code={children as string} language={language} />
+        <CodeBlockCode code={String(children)} language={language} />
       </CodeBlock>
     );
   },
-  pre: function PreComponent({ children }: any) {
+  pre: function PreComponent({
+    children,
+  }: React.PropsWithChildren<{}>) {
     return <>{children}</>;
   },
 };
@@ -70,7 +80,10 @@ const MemoizedMarkdownBlock = memo(
       </ReactMarkdown>
     );
   },
-  function propsAreEqual(prevProps: any, nextProps: any) {
+  function propsAreEqual(
+    prevProps: { content: string },
+    nextProps: { content: string }
+  ) {
     return prevProps.content === nextProps.content;
   }
 );
