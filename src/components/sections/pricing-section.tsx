@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const PricingSection = () => {
-  const billingCycle = "monthly"; // Or change to "yearly" if needed
+  // const billingCycle = "monthly"; // Or change to "yearly" if needed
 
   // Display price animation
   const PriceDisplay = ({
