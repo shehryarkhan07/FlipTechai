@@ -66,6 +66,10 @@ const getAnchorAndDir = (
       return { anchor: [0.5 * w, -outside * h], dir: [0, 1] };
   }
 };
+type Uniforms = {
+  [key: string]: { value: number | number[] | boolean | [number, number, number] };
+};
+
 
 const LightRays: React.FC<LightRaysProps> = ({
   raysOrigin = 'top-center',
@@ -83,7 +87,7 @@ const LightRays: React.FC<LightRaysProps> = ({
   className = '',
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const uniformsRef = useRef<Record<string, { value: any }> | null>(null);
+const uniformsRef = useRef<Uniforms | null>(null);
   const rendererRef = useRef<Renderer | null>(null);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
   const smoothMouseRef = useRef({ x: 0.5, y: 0.5 });
