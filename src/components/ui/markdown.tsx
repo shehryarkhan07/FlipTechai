@@ -59,11 +59,11 @@ const INITIAL_COMPONENTS: Partial<Components> = {
       </CodeBlock>
     );
   },
-  pre: function PreComponent({
-    children,
-  }: React.PropsWithChildren<{}>) {
-    return <>{children}</>;
-  },
+ pre: function PreComponent({
+  children,
+}: React.PropsWithChildren<object>) {
+  return <>{children}</>;
+},
 };
 
 const MemoizedMarkdownBlock = memo(
