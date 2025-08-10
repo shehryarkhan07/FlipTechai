@@ -40,7 +40,7 @@ export const LiquidButton = ({
       )}
     >
       <span className="relative z-10">{children}</span>
-      <span className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 opacity-20 blur-md rounded-xl" />
+      <span className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-blue-500 opacity-20 blur-md rounded-xl" />
     </button>
   );
 };

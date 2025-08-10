@@ -8,12 +8,12 @@ import { siteConfig } from "@/lib/config";
 export default function LogoCarousel() {
   const logos = siteConfig.companyShowcase.companyLogos;
 
-  const [emblaRef, ] = useEmblaCarousel({ loop: true }, [
-    AutoScroll({ playOnInit: true }),
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    AutoScroll({ playOnInit: true, speed: 0.8 }) // 👈 slower speed
   ]);
 
   return (
-    <div className="overflow-hidden w-full max-w-6xl mx-auto pt-10" ref={emblaRef}>
+    <div className="overflow-hidden w-full max-w-7xl mx-auto pt-10 mt-24 sm:mt-32" ref={emblaRef}>
       <div className="flex">
         {logos.map((logo) => (
           <div
